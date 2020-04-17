@@ -4,11 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Web Fonts</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +27,194 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Web Design is 95% Typography</h2>
+					<h5>95% of the information on the web is written language.</h5>
+				</section>
+
+				<section>
+					<h2>Whats Typography?</h2>
+					<p><small><em>(roughly speaking)</em></small></p>
+					<ul>
+						<li><h4>Type Face</h4></li>
+						<li><h4>Layout</h4></li>
+						<li><h4>Gide The Reader</h4></li>
+						<li><h4>Brand</h4></li>
+						<li><h4>Accessibility</h4></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Web Fonts</h2>
+					<ol class="opening-list">
+						<li><h4>Whats A Font?</h4></li>
+						<li><h4>Fonts On The Web</h4></li>
+						<li><h4>Web Fonts</h4></li>
+						<li><h4>Challenge</h4></li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Whats A Font?</h2>
+					<ul>
+						<li><p>A "Typeface" is a collection of fonts with different weights like <strong>bold</strong> and styles like <em>italic</em></p></li>
+						<li><p>A Typeface may also be known as a font, just to confuse things</p></li>
+						<li><p>Each font is made up of graphically related <em>glyphs</em>, <em>characters</em>, or <em>symbols</em></p></li>
+						<li><p>Each glyph is identified by a unicode mapping (143,859 as of Unicode 13.0)</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="https://d33wubrfki0l68.cloudfront.net/1983b8a608713fefbd42bf19f6d6a66581e7003e/a24a9/en/blog/uploads/typeface-vs-typograp-j5kbj.jpg">
+				</section>
+
+				<section>
+					<h2>Categories</h2>
+					<ul>
+						<li><span style="font-family: serif;">Serif</span><span style="padding-left: 2em;" class="dropped-back">Paragraphs of text, great for readability</span></li>
+						<li><span style="font-family: sans-serif;">Sans Serif</span><span style="padding-left: 2em;" class="dropped-back">Good for titles, headlines as well as body copy</span></li>
+						<li><span style="font-family: 'Bangers';">Display</span><span style="padding-left: 2em;" class="dropped-back">Titles again, have a bit of fun</span></li>
+						<li><span style="font-family: 'Dancing Script';">Handwriting</span><span style="padding-left: 2em;" class="dropped-back">Style your bad poetry</span></li>
+						<li><span style="font-family: monospace;">Monospace</span><span style="padding-left: 2em;" class="dropped-back">For the Codes</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fonts On The Web</h2>
+					<h4>System Fonts</h4>
+					<p>"Core fonts for the Web" initiative in 1996</p>
+					<img src="https://www.dummies.com/wp-content/uploads/395935.image0.jpg" alt="">
+					<!-- <code class="hljs">Arial, Courier New, Times New Roman, Comic Sans, Impact, Georgia, Trebuchet, Webdings, Verdana</code> -->
+					<p>Then very little change for a long time</p>
+				</section>
+
+				<section>
+					<h2>Hacks</h2>
+					<p>Using images as text</p>
+					<ul>
+						<li>Hard to update</li>
+						<li>Can't select, copy or translate</li>
+						<li>Slow to load</li>
+						<li>Terrible for screen readers</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Web Fonts</h2>
+					<h3>All praise CSS2</h3>
+					<p>@font-face and better formats start to appear 2006</p>
+					<p>Reached W3C Recommendation 2011</p>
+					<p>Now you can download fonts to the browser easily, like images</p>
+				</section>
+
+				<section>
+					<h2>Fonts As Icons</h2>
+					<p>Dingbats?</p>
+					<p>Now we have Icons</p>
+					<a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a>
+					<a href="https://material.io/resources/icons/" target="_blank">https://material.io/resources/icons/</a>
+				</section>
+
+				<section>
+					<h3>Code: Basic</h3>
+					<p>System Fonts and the font stack</p>
+<pre><code class="hljs" data-line-numbers>/* style.css */
+
+p {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Code: System Fallbacks</h3>
+					<p>System Fonts with fallbacks for different environments</p>
+<pre><code class="hljs" data-line-numbers="3,7|4|5|6">/* style.css */
+
+body {
+  font-family: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Helvetica, Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+}
+
+<p>-apple-system, BlinkMacSystemFont, "Segoe UI",
+	Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+	"Helvetica Neue", sans-serif;</p>
+
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Code: Self Hosted</h3>
+					<p>Load Fonts from your server</p>
+<pre><code class="hljs" data-line-numbers="3,10|4,13|5-9">/* style.css */
+
+@font-face{
+  font-family: 'Hack Reactor Sans';
+  src: url('hackreactor-sans.eot');
+  src: url('hackreactor-sans.eot?#iefix') format('embedded-opentype'),
+       url('hackreactor-sans.woff') format('woff'),
+       url('hackreactor-sans.ttf') format('truetype'),
+       url('hackreactor-sans.svg#hackreactor-sans') format('svg');
+}
+
+html {
+  font-family: "Hack Reactor Sans", "Bitstream Vera Serif", sans-serif;
+}
+
+</code></pre>
+					<p>Create the files <a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com/</a></p>
+				</section>
+
+				<section>
+					<h3>Code: Easy</h3>
+					<p>Load Fonts from a hosted service</p>
+<pre><code class="hljs" data-line-numbers="3-7|11-13">/* index.html */
+
+&lt;head>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  // Rest of your head
+&lt;/head>
+
+/* style.css */
+
+html {
+  font-family: 'Pacifico', cursive;
+}
+
+</code></pre>
+					<a href="https://fonts.google.com" target="_blank">https://fonts.google.com</a>
+				</section>
+
+				<section>
+					<h2>Challenge</h2>
+					<p>Add it to your next web project!</p>
+					<p>Really does only take 30 seconds</p>
+				</section>
+
+				<section>
+					<h2>Questions</h2>
+				</section>
+
+				<section>
+					<h2>Thanks!</h2>
+					<p>Paul</p>
+					<p>https://us04web.zoom.us/j/6352371605</p>
+				</section>
+
+				<section>
+					<h4>References</h4>
+					<a href="https://ia.net/topics/the-web-is-all-about-typography-period" target="_blank">https://ia.net/topics/the-web-is-all-about-typography-period</a>
+					<a href="https://en.wikipedia.org/wiki/Web_typography" target="_blank">https://en.wikipedia.org/wiki/Web_typography</a>
+					<a href="https://en.wikipedia.org/wiki/Unicode_font" target="_blank">https://en.wikipedia.org/wiki/Unicode_font</a>
+					<a href="https://www.w3.org/TR/CSS2/fonts.html#q15.0" target="_blank">https://www.w3.org/TR/CSS2/fonts.html#q15.0</a>
+					<a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com/</a>
+					<a href="https://fonts.google.com/" target="_blank"><code>https://fonts.google.com/</code></a>
+					<a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a>
+				</section>
+
 			</div>
 		</div>
 
@@ -38,6 +226,10 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+				controls: false,
+				// progress: false,
+				transition: 'fade',
+				backgroundTransition: 'zoom',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

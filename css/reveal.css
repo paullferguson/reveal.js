@@ -6,6 +6,32 @@
  * Copyright (C) 2020 Hakim El Hattab, http://hakim.se
  */
 /*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+body .opening-list li:nth-child(1) h4 {
+  font-family: 'Press Start 2P', cursive; }
+
+body .opening-list li:nth-child(2) h4 {
+  font-family: 'Verdana'; }
+
+body .opening-list li:nth-child(3) h4 {
+  font-family: 'Dancing Script', serif; }
+
+body .opening-list li:nth-child(4) h4 {
+  font-family: 'Bangers', cursive; }
+
+body .reveal .slides h2 {
+  margin-bottom: 0.5em; }
+
+body .dropped-back {
+  opacity: 0.75;
+  font-size: 0.65em;
+  vertical-align: middle; }
+
+body .reveal pre {
+  width: auto; }
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 html {
@@ -419,7 +445,7 @@ body {
   display: none;
   height: 3px;
   width: 100%;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.2);
@@ -485,7 +511,6 @@ body {
   pointer-events: none;
   overflow: visible;
   z-index: 1;
-  text-align: center;
   -webkit-perspective: 600px;
           perspective: 600px;
   -webkit-perspective-origin: 50% 40%;

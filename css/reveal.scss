@@ -7,6 +7,36 @@
  */
 
 
+ /*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+
+body {
+
+	.opening-list {
+		li:nth-child(1) h4 { font-family: 'Press Start 2P', cursive; }
+		li:nth-child(2) h4 { font-family: 'Verdana'; }
+		li:nth-child(3) h4 { font-family: 'Dancing Script', serif; }
+		li:nth-child(4) h4 { font-family: 'Bangers', cursive; }
+	}
+
+	.reveal .slides h2 {
+		margin-bottom: 0.5em;
+	}
+
+	.dropped-back {
+		opacity: 0.75;
+		font-size: 0.65em;
+		vertical-align: middle;
+	}
+
+	.reveal pre {
+		width: auto;
+	}
+
+}
+
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -508,7 +538,7 @@ $controlsArrowAngleActive: 36deg;
 	display: none;
 	height: 3px;
 	width: 100%;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	z-index: 10;
 
@@ -583,7 +613,7 @@ $controlsArrowAngleActive: 36deg;
 
 	overflow: visible;
 	z-index: 1;
-	text-align: center;
+	// text-align: center;
 	perspective: 600px;
 	perspective-origin: 50% 40%;
 }
