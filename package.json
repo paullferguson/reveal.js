@@ -1,7 +1,7 @@
 {
   "name": "reveal.js",
   "version": "3.9.2",
-  "description": "The HTML Presentation Framework",
+  "description": "A Presentation",
   "homepage": "http://revealjs.com",
   "subdomain": "revealjs",
   "main": "js/reveal.js",
@@ -11,13 +11,11 @@
     "build": "grunt"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Paul Ferguson"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/paullferguson/reveal.js.git"
   },
   "engines": {
     "node": ">=9.0.0"
